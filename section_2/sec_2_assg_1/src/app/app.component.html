@@ -1,0 +1,10 @@
+<app-warning-alert></app-warning-alert>
+<app-success-alert></app-success-alert>
+<button class="btn btn-primary" (click)="onClickBtn()">Display Details</button>
+<p *ngIf="displayParagraph">This is a paragraph</p>
+<p>number of clicks: {{getClickLog().length }}</p>
+<div *ngFor="let logItem of clickLog; let i = index" 
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text' : i >= 5}">
+    {{logItem}}
+</div>
